@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Book Purchase by Month (2019)</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <script>
+       let chart = document.getElementById('chart').getContext('2d');
+       let purchaseNurSch = new Chart(chart, {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Encyclopedia of Counceling',
+                    order: 1,
+                    data: [387, 179, 180, 31, 0, 145, 149, 388, 94, 0, 0, 22],
+                    fill: false,
+                    borderColor: '#99ABDB',
+                    pointBackgroundColor: '#99ABDB',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                 },{
+                    type: 'line',
+                    label: 'Marino\'s The ICU Book',
+                    order: 2,
+                    data: [2, 65, 136, 110, 3, 243, 248, 210, 169, 142, 132, 115],
+                    fill: false,
+                    borderColor: '#F7B499',
+                    pointBackgroundColor: '#F7B499',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Bates\' Guide to Physical Examination and History Taking',
+                    order: 3,
+                    data: [120, 91, 183, 62, 0, 173, 307, 319, 15, 56, 91, 158],
+                    fill: false,
+                    borderColor: '#CECECE',
+                    pointBackgroundColor: '#CECECE',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'ECG Workout: Exercises in Arrhythmia Interpretation',
+                    order: 4,
+                    data: [326, 282, 232, 79, 3, 65, 8, 7, 108, 23, 73, 64],
+                    fill: false,
+                    borderColor: '#FFD781',
+                    pointBackgroundColor: '#FFD781',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Bates\' Pocket Guide to Physical Examination and History Taking',
+                    order: 5,
+                    data: [218, 111, 123, 202, 2, 101, 188, 378, 9, 52, 83, 108],
+                    fill: false,
+                    borderColor: '#A1C2E7',
+                    pointBackgroundColor: '#A1C2E7',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Brunner and Suddarth\'s of Medical-Surgical Nursing',
+                    order: 6,
+                    data: [650, 106, 91, 51, 2, 34, 93, 395, 67, 24, 43, 19],
+                    fill: false,
+                    borderColor: '#A5CE92',
+                    pointBackgroundColor: '#A5CE92',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Pocket Medicine: The Massachusetts General Hospital Handbook of Internal Medicine',
+                    order: 7,
+                    data: [399, 148, 180, 317, 8, 217, 117, 110, 38, 100, 0, 0],
+                    fill: false,
+                    borderColor: '#838BA7',
+                    pointBackgroundColor: '#838BA7',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Pocket Primary Care (Pocket Notebook Series)',
+                    order: 8,
+                    data: [160, 209, 115, 189, 2, 110, 162, 265, 102, 108, 84, 69],
+                    fill: false,
+                    borderColor: '#C79B90',
+                    pointBackgroundColor: '#C79B90',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Kaplan and Sadock\'s Synopsis of Psychiatry: Behavioral Sciences/Clinical Psychiatry',
+                    order: 9,
+                    data: [112, 75, 61, 87, 1, 128, 207, 535, 9, 27, 120, 213],
+                    fill: false,
+                    borderColor: '#A9A9A9',
+                    pointBackgroundColor: '#A9A9A9',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                },{
+                    type: 'line',
+                    label: 'Nursing 2020 Drug Handbook',
+                    order: 10,
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 317],
+                    fill: false,
+                    borderColor: '#C9B395',
+                    pointBackgroundColor: '#C9B395',
+                    lineTension: 0,
+                    pointHoverRadius: 5,
+                    
+                    
+                }],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            },
+        options: {
+            title: {
+                display: true,
+                text: 'Book Purchase by Month (2019)',
+                fontSize: 20,
+            },
+            legend: {
+                position: 'bottom',
+                align: 'start',
+                labels: {
+                    boxWidth: 150,
+                    padding: 20,
+                }
+            },
+            tooltips: {
+                mode: 'index',
+                //intersect: 'false',
+            }
+        }
+        }); 
+    </script>
+    
+</body>
+</html>
